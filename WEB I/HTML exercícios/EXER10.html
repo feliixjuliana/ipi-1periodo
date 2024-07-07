@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Exercício 10 - Formulários</title>
+</head>
+<body>
+    <header>
+        <h1>Exercício 10 - Formulários</h1> 
+        <h2><code>&lt;input type="file" /&gt;</code> e <code> &lt;input type="hidden" /&gt;</code></h2>
+    </header> <hr>
+    <form method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Enviando arquivo</legend>
+        <label for="arquivo">Arquivo: <input type="file" id="arquivo" /></label>
+        <label for="escondido"><input type="hidden" id="escondido" value="arquivo enviado pelo usuário"></label>
+        <input type="submit" value="Enviar"/>
+    </fieldset>
+</form>
+<footer><address>copyright &copy;Juliana Felix</address></footer>
+</body>
+</html>

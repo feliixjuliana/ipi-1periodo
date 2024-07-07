@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <script>
+        // Funções
+        function somar(vetor) {
+            var resultado = 0
+            for (var i = 0; i < vetor.length; i++) {
+                resultado += vetor[i]
+            }
+            return + resultado
+        }
+        function subtrair(vetor) {
+            var resultado = vetor[0]
+            for (var i = 1; i < vetor.length; i++) {
+                resultado -= vetor[i]
+            }
+            return resultado
+        }
+        // function carregarVetor(){
+        //     var vetor = []
+        //     var entradaNumeros = Number(prompt("Informe um número: (0 para parar)"))
+        //     for(;entradaNumeros != 0;){
+        //         vetor.push(entradaNumeros)
+        //         entradaNumeros = Number(prompt("Informe outro número: (0 para parar)"))
+        //     }
+        //     return vetor
+        // }
+        function carregarVetor() {
+            var vetorInterno = []
+            while (true) {
+                var num = Number(prompt("Informe números\n(0) para parar"))
+
+                if (num == 0) {
+                    break
+                }
+                vetorInterno.push(num)
+            }
+            return vetorInterno
+        }
+
+        // Principal
+        var numeros = carregarVetor()
+
+        while (true) {
+            var opcao = Number(prompt("Escolha uma opção: \n(1) Somar \n(2) Subtrair \n(0) Sair"))
+
+            if (opcao == 1) {
+                alert("A soma dos números é: " + somar(numeros))
+            }
+
+            if (opcao == 2) {
+                alert("A subtração dos números é: " + subtrair(numeros))
+            }
+
+            if (opcao == 0) {
+                break
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

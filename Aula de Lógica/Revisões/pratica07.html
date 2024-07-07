@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pratica</title>
+</head>
+
+<body>
+  <script>
+
+    function carregarVetor() {
+      var vetor = []
+      var entrada = Number(prompt("Carregue o vetor: (0 para finalizar)"))
+      while (entrada != 0) {
+        vetor.push(entrada)
+        entrada = Number(prompt("Carregue o vetor: (0 para finalizar)"))
+      }
+      
+      return vetor
+    }
+
+    function somar(vetor) {
+      var vetor = vetor // Não é obrigatótio declarar um novo vetor interno, porém funciona da mesma maneira
+      var soma = 0
+      for (var i = 0; i < vetor.length; i++) {
+        soma = soma + vetor[i]
+
+      }
+      //alert(`A soma é: ${soma}`)
+      return soma
+    }
+
+    function media(vetor) {
+      var soma = 0
+
+      for (var i = 0; i < vetor.length; i++) {
+        soma = soma + vetor[i]
+      }
+      var media = soma / i
+      //alert(`A media é: ${media.toFixed(1)}`)
+      return media.toFixed(1)
+    }
+
+    function multiplicacao(vetor) {
+      var produto = 1
+      for (var i = 0; i < vetor.length; i++) {
+        produto = produto * vetor[i]
+      }
+      //alert(`O produto é: ${produto}`)
+      return produto
+    }
+
+    function maior(vetor) {
+      var maior = 0
+      for (var i = 0; i < vetor.length; i++) {
+        if(vetor[i] > maior){
+          maior = vetor[i]
+        }
+      }
+      return maior
+    }
+
+    function menor(vetor){
+      var menor = 9999
+      for(var i = 0; i < vetor.length; i++){
+        if(vetor[i] < menor){
+          menor = vetor[i]
+        }
+      }
+      return menor
+    }
+
+    // Declarando a variável vetor para ela servir de parametro para as outras funções
+    var vetor = carregarVetor()
+    
+    document.write("A quantidade de números inseridos no vetor foi: " + vetor.length +"<br>"+"E o resultado foi:"+"<br>")
+    document.write(`A soma é: ${somar(vetor)} <br>`)
+    document.write(`A média é: ${media(vetor)} <br>`)
+    document.write(`O produto é: ${multiplicacao(vetor)} <br>`)
+    document.write(`O maior é: ${maior(vetor)} <br>`)
+    document.write(`O menor é: ${menor(vetor)}`)
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+</head>
+<body>
+    <script>
+        var numero = Number (prompt ("Informe um número:"))
+        var média;
+        var soma = 0
+
+        for (var cont = 1; numero >= 0; cont++ ) {
+            soma = soma + numero
+            média = soma/ cont
+            numero = Number (prompt ("Informe um número:"))
+        
+        }
+        document.write("A soma dos números digitados foi " + soma + " de " + cont + " números digitados. Sua média ficou " + média + ".")
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova</title>
+</head>
+
+<body>
+    <script>
+
+        //Funções
+        function divisiveisEntre1eNumero(valor) {
+            var qtdDiv = 0
+            for (var i = 1; i <= valor; i++) {
+                if (valor % i == 0) {
+                    qtdDiv++
+                }
+            }
+            return qtdDiv
+        }
+
+        function primo(valor) {
+            divisiveisEntre1eNumero(valor)
+            if (divisiveisEntre1eNumero(valor) == 2) {
+                alert("O número é primo.")
+            } else {
+                alert("O número não é primo.")
+            }
+        }
+
+        function divPor2_3_4(valor) {
+
+            if (inicio <= valor) {
+                if (inicio > 20 && inicio % 2 == 0 && inicio % 3 == 0 && inicio % 4 == 0) {
+                    divisiveis2_3_4.push(inicio)
+                }
+                inicio++
+                divPor2_3_4(valor)
+            }
+        }
+
+        function novoNumero() {
+            numero = Number(prompt("Informe um novo número:"))
+            inicio = 1
+
+        }
+
+        function saida() {
+            var resposta = prompt("Deseja realmente sair? [s/n]")
+            while (true) {
+                if (resposta == "s") {
+                    break
+                }
+                if (resposta != "s")
+                    resposta = prompt("Deseja realmente sair? [s/n]")
+            }
+            if (resposta == "n") {
+                
+            }
+        }
+
+
+
+
+        
+        var numero = Number(prompt("Informe um número:"))
+
+        var inicio = 1
+        var divisiveis2_3_4 = []
+        divPor2_3_4(numero)
+
+
+
+
+
+
+        while (true) {
+            var opcoes = Number(prompt("Escolha uma das opcões: \n(1) Quantidade de divisores entre 1 e o próprio número. \n(2) É primo? \n(3) Números divisíveis por 2, 3 e 4 ao mesmo tempo, maiores que 20. \n(4) Informar outro número. \n(5) Sair"))
+
+            if (opcoes == 1) {
+                alert(`O resultado é: ${divisiveisEntre1eNumero(numero)}`)
+            }
+            if (opcoes == 2) {
+                alert(primo(numero))
+            }
+            if (opcoes == 3) {
+                alert("Os números maiores que 20 divisíveis por 2, 3 e 4 são: " + divisiveis2_3_4)
+            }
+            if (opcoes == 4) {
+                novoNumero()
+            }
+            if (opcoes == 5) {
+                saida()
+                break
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

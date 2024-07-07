@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista10</title>
+</head>
+<body>
+    <script>
+
+        //Pergunta do nome
+        var nome = prompt("Informe seu nome, por favor: ")
+
+        //Boas Vindas
+        function boasvindas(){
+            alert("Olá! " + nome + ", seja bem-vindo(a). Preciso que informe dois números para iniciarmos: ")
+        }
+        var início = boasvindas()
+
+        //Dois números principais
+        var num1 = Number(prompt("Informe um número: "))   
+        var num2 = num2(num2)
+
+
+        //Criação do vetor com os dois números informados
+        //function vetor(){
+        //    var vetorprinicipal = []
+         //   for(var x= 1; x <= 2; x = x+1 ){
+         //       var numero = Number (prompt("Informe o primeiro número e o segundo número deverá ser acima de 320, por favor:"))
+          //      vetorprinicipal.push(numero)
+
+          //  }
+      //  return vetorprinicipal
+      //  }
+
+            function num2(num2) {
+            var num21 = 0
+            var num2 = Number(prompt("Informe um segundo número, mas esse deve ser acima de 320: "))     
+            if (num2 < 320) {
+               var num2 = Number (prompt("ACIMA DE 320!!!!!!!!"))
+            }  else {
+                num21 = num2
+            }
+            return num21
+            }
+
+
+        //O que o usuário deseja
+        while(true) {
+          var pedido = Number (prompt ("Informe o que deseja ser mostrado \n (1)Quantos números são divisíveis por 5\n (2)Quais números maiores que 20 são divisíveis por 11 \n (3)Quais números entre 10 e 320 são divisíveis por 2, 4 e 5?\n (4) Quantas vogais há no nome informado? \n (5) Exiba o nome informado de trás para frente. \n (9)sair"))
+
+          if (pedido == 1) {
+            alert("São " + divisiveis5())            
+          }
+          if (pedido ==2) {
+
+          }
+          if (pedido==3) {
+            alert ("São " + dez320())
+          }
+          if (pedido==4) {
+            alert ("Temos " + vogais(nome) + " vogais.") 
+          }
+          if(pedido==5) {
+            alert (nomeaocontrario(nome))
+
+          }
+          if(pedido==9){
+            saida(pedido)
+          }
+        }
+
+        //Chamando o vetor
+        //var vetor = vetor()
+
+        //Auxiliando nas comparações de recursividade
+           var cont = 0
+
+        //Função divisíveis por 5 recursividade
+        function divisiveis5(){
+ 
+
+            if (num1 <= num2){
+                if (num2%5==0){
+                    cont++
+                }
+                num1++
+               divisiveis5()
+            }
+            return cont
+
+        }
+       //Entre 10 e 320 divisíveis 2,4 e 5
+       function dez320(){
+        var divisiveisentre = []
+        var numero1 = 10
+        var numero2 = 320
+        for(; numero1< numero2; numero1++) {
+            if ((numero1<numero2) && (numero1%2==0) && (numero1%4==0) && (numero1%5==0)){
+                divisiveisentre.push(numero1)
+            }
+        }
+        return divisiveisentre
+       }
+
+       //Vogais
+       function vogais(nome) {
+        var aux1 = 0 //Onde ficará o valor das vogais
+
+        for(var aux2 = 0; aux2 <= nome.length; aux2++){
+         if ((nome[aux2] == "A") ||  (nome[aux2] == "a") ||  (nome[aux2] == "E") ||  (nome[aux2] == "e") || 
+         (nome[aux2] == "I") ||  (nome[aux2] == "i") || (nome[aux2] == "O") ||  (nome[aux2] == "o") || (nome[aux2] == "U") ||  (nome[aux2] == "u")) {
+            aux1++
+         }
+        }
+        return aux1
+       }
+
+       //Nome aocontrario
+       function nomeaocontrario(nome) {
+        var vetornome = [] 
+            for(var cont = nome.length; cont >= 0; cont = cont-1){
+                vetornome.push(nome[cont])
+            }
+        return vetornome
+       } //UAU, CONSEGUI ESSA DE PRIMEIRAAAAAAAAAAAAA, IHAAAAAA
+ 
+        //Saída
+        function saida(pedido){
+                while(true) {
+                var perguntadesaida = prompt("Realmente quer sair? (s/n)")
+                if(perguntadesaida != "s"){
+                    saida(pedido)
+                } 
+                if (perguntadesaida != "n") {
+                    saida(pedido)      
+                }
+                if (perguntadesaida == "s") {
+                        break
+                } else { 
+                    boasvindas()               
+                }
+            }                    
+                }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Informe um número: </p>
+    <input type="number" name="numeroaleatorio" id="idnumero">
+    <input type="button" value="=" onClick="calcular()">
+    <p>Dos números digitados, os únicos que são divisíveis por 3 são:</p>
+    <label for="" id="idresultado"></label>
+    <script>
+        function calcular() {
+            var numero = Number (document.querySelector("input#idnumero").value)
+                for (var cont= 0; numero != 0; cont++) {
+            if (numero%2!=0){
+                document.getElementById("idresultado").innerText = `${numero}`
+            }
+        }
+    }
+
+
+    </script>
+</body>
+</html>

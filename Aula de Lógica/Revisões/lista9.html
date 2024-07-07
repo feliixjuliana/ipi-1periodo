@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 9</title>
+</head>
+<body>
+    <script>
+        //Variáveis de auxílio
+        //Boas vindas!!
+        function  Boasvindas() {
+            alert("Olá! Bem-vindo ao site, após informar os números, indique o que deseja ser feito.")
+        }
+
+        var início =  Boasvindas()
+
+        //Criação do vetor
+        function vetor() {
+            var vetordousuario = []
+            var numeros = Number (prompt ("Informe um número e caso não deseja mais, informe 0 para sair."))
+            while (true) {
+
+                if(numeros== 0) {
+                    break
+                }
+              vetordousuario.push(numeros)
+
+              var numeros = Number (prompt ("Informe um número e caso não deseja mais, informe 0 para sair."))
+            }
+
+         return vetordousuario
+        }
+
+        //Vetor
+    
+        var vetor = vetor()
+
+        //Pergunta do que precisa ser feito
+
+        while(true) {
+            var afazer = Number (prompt("Olá, vi que parou! Agora me diga o que preciso fazer. \n (1) Maior número \n (2)Menor número \n(3) Números pares \n (4)Números ímpares \n (5) Números divisíveis por 2 e 3 \n (6) Escolher outros números \n (0)Sair "))
+
+            if(afazer == 1) {
+                alert("O maior dos números citados foi " + MaiorNumero(vetor) )
+            }
+            if(afazer==2){
+                alert("O menor número foi: " + MenorNumero(vetor) )
+            }
+
+            if(afazer == 3) {
+                alert("Os números pares foram: " + pares(vetor)  )
+            }
+
+            if(afazer == 4) {
+                alert("Os números ímpares são: " + impares(vetor))
+            }
+
+            if(afazer == 5) {
+                alert("Os números que podem ser divididos por 2 e 3 são: " + divisiveis(vetor))
+            }
+            
+            if (afazer == 6) {
+                var numeros = Number (prompt ("Informe um número e caso não deseja mais, informe 0 para sair."))
+            while (true) {
+                if(numeros== 0) {
+                    break
+                }
+              vetor.push(numeros)
+
+              var numeros = Number (prompt ("Informe um número e caso não deseja mais, informe 0 para sair."))
+            }
+            }
+
+            if(afazer == 0) {
+                break
+            }
+        }
+
+        // Função maior e menor
+        function MaiorNumero(vetor) {
+                var resultadomaior = vetor[0]
+             for(var x = 1; x < vetor.length; x= x + 1) {
+                while(resultadomaior < vetor[x]) {
+                    resultadomaior =  vetor[x]
+                }
+                } 
+             
+         return resultadomaior
+        }
+
+        function MenorNumero(vetor) {
+            var resultadomenor =  vetor[0]
+
+            for (var x= 1; x < vetor.length; x= x+1) {
+
+                while(resultadomenor > vetor[x]) {
+                    resultadomenor = vetor[x]
+ 
+                }
+            }
+            return resultadomenor
+        }
+
+        
+        function pares(vetor) {
+            var vetorpar = []
+            for (var x = 0; x < vetor.length; x= x+1) {
+                var auxilio = vetor[x]
+
+                if((auxilio%2)==0) {
+                    vetorpar.push(auxilio)
+                }
+            }
+            return vetorpar
+        }
+
+            
+        function impares(vetor) {
+            var vetorimpar = []
+            for (var x = 0; x < vetor.length; x= x+1) {
+                var auxilio2 = vetor[x]
+
+                if((auxilio2%2)!=0) {
+                    vetorimpar.push(auxilio2)
+                }
+            }
+            return vetorimpar
+        }
+
+        function divisiveis(vetor) {
+            var vetordivisivel = []
+
+            for(var x = 0; x < vetor.length; x =  x+1) {
+                var auxilio3 = vetor[x]
+                if ((auxilio3%2==0)&&(auxilio3%3==0)){
+                    vetordivisivel.push(auxilio3)
+                }
+            }
+        return vetordivisivel
+        }
+
+
+    </script>
+</body>
+</html>

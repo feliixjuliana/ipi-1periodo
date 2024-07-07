@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var numero = Number(prompt("Informe um número:"))
+        var cont = 0;
+        var maior;
+        var guardado = numero
+
+
+        while (numero != -1) {
+            var guardado = numero
+            cont = cont + 1
+            var numero = Number(prompt("Informe um número:"))
+
+            if (guardado >= numero) {
+                var maior = guardado
+            } else {
+                var maior = numero
+            }
+        }
+        document.write("O valor maior é " + maior)
+    </script>
+</body>
+
+</html>

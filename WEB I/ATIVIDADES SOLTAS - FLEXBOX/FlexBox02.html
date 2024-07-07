@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox 02</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        html {
+            height: 100vh;
+            width: 100vw;
+        }
+        body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+        nav {
+            color: #F8F8F8;
+            height: 100%;
+            width: 20%;
+            background-color: #222234;
+        }
+        .conteudobruto {
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            width: 100%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            flex-flow: column wrap;
+        }
+        header {
+            height: 10%;
+            width: 100%;
+            background-color: yellow;
+        }
+        article {
+            color: #F8F8F8;
+            height: 100%;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #222256;
+        }
+        aside {
+            height: 100%;
+            width: 30%;
+            color: #F8F8F8;
+            background-color: #222234;
+        }
+        footer {
+            height: 10%;
+            width: 100%;
+            color: #F8F8F8;
+            background-color: #282828;
+        }
+    </style>
+</head>
+<body>
+    <nav><h2>&lt;nav&gt;</h2></nav>
+<div class="conteudobruto">
+    <header><h1>&lt;header&gt;</header>
+    <main>
+            <article>
+                <span><h2>&lt;article&gt;</h2></span>
+                <footer><h2>&lt;footer&gt;</h2></footer>
+            </article>
+            <aside><h2>&lt;aside&gt;</h2></aside>
+    </main>
+</div>
+</body>
+</html>

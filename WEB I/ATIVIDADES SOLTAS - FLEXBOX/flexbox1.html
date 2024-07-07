@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        *,
+        *::before *,
+        *::after {
+            box-sizing: border-box;
+        }
+        .principal-main {
+            background-color: rgb(219, 140, 83);
+            display:flex;
+            margin-left: 2.5em; margin-right: 2.5em; 
+            width: 800px; height: 400px; 
+            flex-direction: center; justify-content: center; align-items: center;
+        }
+        .localdasdiv{
+            display: flex;
+            margin-left: 30em; margin-right: 2.5em; background-color: chocolate;
+            width: 200px; height: 200px;
+            flex-direction: column; justify-content: right; align-items: right;
+            flex-flow: column wrap;
+
+        }
+        body {
+            margin-top: 4em;
+           align-items: center;
+        }
+
+        header, footer {
+            margin-bottom: 3em;
+            background-color: darkolivegreen;
+            text-align: center;
+            
+        }
+
+        div {
+            background-color: rgb(214, 146, 97);
+            font-size: 1em; padding: 5px; height: 20%; margin: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Meu pai do céu, espero que eu consiga</h1>
+    </header>
+ <main class="principal-main">
+    <article></article>
+
+    <main class="localdasdiv">
+        
+        <div>Felicidade</div>
+        <div>Alegria</div>
+        <div>Diversão</div>
+        <div>Sorriso</div>
+        
+    </main>
+   </main>
+
+</body>
+<footer><h1>Alguma coisa</h1></footer>
+</html>

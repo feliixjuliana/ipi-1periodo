@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //função divisivel por 5
+        function div001(div) {   
+
+            if (div <= valor_div2){
+                if(div %5 == 0){
+                    cont++
+                }
+                div++
+                div001(div) 
+                }
+            return cont
+        } // fim função div001
+
+        //função maior que 20 e divivel por 11
+        function div002(){
+        var valor_maior = numero1
+        var valor_maior2 = numero2
+        var contador = 0
+        var acres = []
+            while(valor_maior < valor_maior2) {
+                if((valor_maior > 20) && (valor_maior %11 == 0)){
+                    contador++
+                    acres.push(valor_maior)
+                }
+                valor_maior++
+            }
+            return acres
+        } // fim função 2
+        
+        //função entre 10 e 320, divisiveis por 2, 4 e 5
+        function div003(){
+        var valor_entre = numero1
+        var valor_entre2 = numero2
+        var contar = 0
+        var vetor_div3 = []
+            for( ;valor_entre < valor_entre2 ;){
+                if((valor_entre >= 10) && (valor_entre <= 320) && (valor_entre %2 == 0) && (valor_entre %4 == 0) && (valor_entre %5== 0)){
+                    contar++
+                    vetor_div3.push(valor_entre)
+                }
+                valor_entre++
+            }
+            return vetor_div3
+        } // fim função 3
+
+        //função vogais no nome
+        function vogais(){
+        
+        
+        var contador_vogal = 0
+        var contador_vogal2 = 0
+            for(;contador_vogal2 < usuario.length; contador_vogal2++ ){
+                if((usuario[contador_vogal2] == "a") || (usuario[contador_vogal2] == "A") || (usuario[contador_vogal2] == "e") || (usuario[contador_vogal2] == "E") || (usuario[contador_vogal2] == "i") || (usuario[contador_vogal2] == "I") || (usuario[contador_vogal2] == "o") || (usuario[contador_vogal2] == "O") || (usuario[contador_vogal2] == "u") || (usuario[contador_vogal2] == "U") ){
+                    contador_vogal++
+                }
+                
+            
+            }
+        return contador_vogal
+        } // fim função vogal
+
+
+        // função nome ao contrario
+        function nomeContra(){
+
+        var contrario = []
+        var contador_nome = usuario.length
+            for( ; contador_nome >= 0 ; ){
+                contrario.push(usuario[contador_nome])
+                contador_nome--
+            }
+        return contrario
+        } // fim função nome ao contrario
+
+        // função menu
+        function menu(){
+        
+            
+        while(true){
+
+            var opcao = Number(prompt("Escolha uma opção: (considere o intervalo dos números)"
+                + "\n(1) Quantos números são divisíveis por 5?"
+                + "\n(2) Quais números maiores que 20 são divisíveis por 11?"
+                + "\n(3) Quais números entre 10 e 320 são divisíveis por 2, 4 e 5?"
+                + "\n(4) Quantas vogais há no nome informado?"
+                + "\n(5) Exiba o nome informado de trás para frente."
+                + "\n(9) Sair."))
+
+            if(opcao == 1){                   
+                alert(div001(valor_div))
+            }
+            if(opcao == 2){
+                alert(div002())
+            }
+            if(opcao == 3){
+                alert(div003())
+            }
+            if(opcao == 4){
+                alert(vogais())
+            }
+            if(opcao == 5){
+                alert(nomeContra())
+            }
+            if(opcao == 9){
+                var validar = prompt("Tem certeza que quer sair [s/n]")
+                if(validar == "s"){
+                    break;
+                }
+            }
+        }
+        }
+
+
+
+        //entrada de dados
+        var usuario = prompt("Informe seu nome: ");
+        //boas vindas
+        alert(`Bem vindo, ${usuario}! \nPreciso que informe 2 números para começarmos.`)
+        //3- Solicite que o usuário informe dois números, o segundo maior que 320.
+        var numero1 = Number(prompt("Digite um número: "));
+        alert("O segundo número precisa ser maior que 320.");
+        var numero2 = Number(prompt("Digite o segundo numero maior que 320: "));
+            if(numero2 <= 320){
+                alert("O numero foi menor ou igual a 320, por favor, repita.")
+                numero2 = Number(prompt("DIGITE O SEGUNDO NUMERO, MAIOR QUE 320: "));
+            }
+        
+
+        var valor_div = numero1
+        var valor_div2 = numero2
+        var cont = 0
+        
+        
+        /*4- Exiba a seguinte mensagem (menu):
+        "Escolha uma opção: (considere o intervalo dos números)"
+                + "\n(1) Quantos números são divisíveis por 5?"
+                + "\n(2) Quais números maiores que 20 são divisíveis por 11?"
+                + "\n(3) Quais números entre 10 e 320 são divisíveis por 2, 4 e 5?"
+                + "\n(4) Quantas vogais há no nome informado?"
+                + "\n(5) Exiba o nome informado de trás para frente."
+                + "\n(9) Sair." */
+
+        
+        
+
+
+        // alert(nomeContra())
+        menu()
+
+        
+    </script>
+</body>
+</html>

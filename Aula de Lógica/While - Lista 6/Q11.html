@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisíveis por 3</title>
+</head>
+<body>
+    <script>
+        var numero = Number (prompt ("Informe um número:"))
+        var cont = 0 
+
+        while (numero != 0) {
+
+                if ((numero % 3)==0) {
+                document.write (numero + "<br>")
+                cont = cont + 1
+            }
+            
+            var numero = Number (prompt ("Informe um número"))
+        }
+    document.write (`Foram digitados ${cont} números divisíveis por 3.`)
+    </script>
+</body>
+</html>

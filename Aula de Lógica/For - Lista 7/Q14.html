@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma, média, produto...</title>
+</head>
+<body>
+    <script>
+        var num = Number (prompt ("Informe um número:"))
+        var menor = 9999999999999999
+        var maior = 0
+        var produto = 1
+        var soma = 0
+        var média= 0
+
+        for (var cont = 1; num!= 0; cont++) {
+            soma = (soma + num)
+            média = (soma / cont)
+            if ((num < menor) && (num != 0)){
+                menor = num
+            } 
+            if ((num > maior)&& (num != 0)){
+                maior = num
+            }
+            produto = produto * num
+            var num = Number (prompt("Informe um número"))
+        }
+        document.write("Foram digitados " + cont + " números e o resultado foi:" + "<br>")
+        document.write("Soma: " + soma + "<br>")
+        document.write("Média: " + média+ "<br>")
+        document.write("Menor: " + menor+ "<br>")
+        document.write("Maior " + maior+ "<br>")
+        document.write("Produto " + produto+ "<br>")
+
+    </script>
+</body>
+</html>

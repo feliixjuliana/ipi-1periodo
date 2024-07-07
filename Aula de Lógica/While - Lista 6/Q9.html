@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alturas</title>
+</head>
+<body>
+    <script>
+        var altura_de_ana = 1.50
+        var altura_de_lucas = 1.15
+        var cont = 0 //ano
+         
+        while (altura_de_lucas <= altura_de_ana){
+            var altura_de_lucas = altura_de_lucas + 0.04
+            var altura_de_ana = altura_de_ana + 0.02
+            var cont = cont + 1
+        }
+    document.write (`Vai precisar de ${cont} anos para Lucas passar de Ana.`)
+    </script>
+</body>
+</html>
